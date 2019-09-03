@@ -1,0 +1,43 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/code
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:2.2
+    steps:
+      - checkout
+      - run:
+          name: Build
+          command: dotnet build Liaison.sln -c Release
+      - run:
+          name: Test
+          command: dotnet test ./test/Liaison.Tests -c Release --no-build --no-restore
+      - run:
+          name: Package
+          command: dotnet pack ./src/Liaison/Liaison.csproj -c Release -o ../../artifacts --include-symbols --no-build
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - artifacts/*.nupkg
+  publish:
+    working_directory: ~/code
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:2.2
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Publish
+          command: dotnet nuget push ./ -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json
+workflows:
+  version: 2
+  production:
+    jobs:
+      - build
+      - publish:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master

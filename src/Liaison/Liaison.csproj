@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+
+        <PackageId>Liaison</PackageId>
+        <PackageTags>liaison;aspnetcore;mediator;request;response;queries;commands;notifications</PackageTags>
+        <PackageIconUrl>https://github.com/weareslate/liaison/blob/master/assets/liaison_logo_128x128.png</PackageIconUrl>
+        <PackageProjectUrl>https://github.com/weareslate/liaison</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/weareslate/liaison/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>git://github.com/weareslate/liaison</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="7.0.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.App" />
+      <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="2.2.0" />
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    </ItemGroup>
+
+</Project>
