@@ -6,7 +6,7 @@
 
 ### Introduction
 
-Jimmy Bogard (@jbogard) created MediatR (https://github.com/jbogard/MediatR), one of my favourite frameworks. Whilst using it I always found myself creating "thin" controllers.
+Jimmy Bogard created MediatR (https://github.com/jbogard/MediatR), one of my favourite frameworks. Whilst using it I always found myself creating "thin" controllers.
 
 So I thought, lets bypass controllers - so here is Liaison.
 
