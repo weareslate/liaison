@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/gh/weareslate/liaison.svg?style=svg)](https://circleci.com/gh/weareslate/liaison)
 ![Nuget](https://img.shields.io/nuget/v/Liaison?style=for-the-badge)
 ![Nuget](https://img.shields.io/nuget/dt/Liaison?style=for-the-badge)
+[![CircleCI](https://circleci.com/gh/weareslate/liaison.svg?style=svg)](https://circleci.com/gh/weareslate/liaison)
 
 # Liaison
 
