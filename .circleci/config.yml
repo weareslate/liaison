@@ -39,10 +39,11 @@ workflows:
               ignore: master
   production:
     jobs:
-      - build
-      - publish:
-          requires:
-            - build
+      - build:
           filters:
             branches:
               only: master
+      - publish:
+          requires:
+            - build
+          
