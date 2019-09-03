@@ -55,7 +55,7 @@ app.UseLiaison( liaison =>
     // /api/todos
     liaison.Route( "users" )
             //  GET {id}
-           .Get<GetUserRequest>()
+           .Get<GetUserRequest>("{id}")
             //  GET
            .Get<GetAllUsersRequest>()
             //  POST
