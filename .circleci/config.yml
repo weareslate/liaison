@@ -31,13 +31,19 @@ jobs:
           command: dotnet nuget push ./ -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json
 workflows:
   version: 2
+  prs:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: master
   production:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              only: master
       - publish:
           requires:
             - build
-          filters:
-            branches:
-              only:
-                - master
+          

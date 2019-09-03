@@ -5,7 +5,7 @@
 
         <PackageId>Liaison</PackageId>
         <PackageTags>liaison;aspnetcore;mediator;request;response;queries;commands;notifications</PackageTags>
-        <PackageIconUrl>https://github.com/weareslate/liaison/blob/master/assets/liaison_logo_128x128.png</PackageIconUrl>
+        <PackageIconUrl>https://raw.githubusercontent.com/weareslate/liaison/master/assets/liaison_logo_128x128.png</PackageIconUrl>
         <PackageProjectUrl>https://github.com/weareslate/liaison</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/weareslate/liaison/blob/master/LICENSE</PackageLicenseUrl>
         <RepositoryType>git</RepositoryType>
